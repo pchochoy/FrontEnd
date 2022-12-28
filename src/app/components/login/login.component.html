@@ -1,0 +1,118 @@
+<!--<form [formGroup]="form" class="m-3 custom-form" (ngSubmit)="onEnviar($event)">
+
+    <div class="mb-5">
+        <label for="usuario1" class="form-label">E-mail</label>
+        <input type="email" 
+            formControlName="usuario" 
+            class="form-control custom-form input" 
+            id="usuario1"
+            [ngClass]="{'is-invalid':Usuario?.errors && Password?.touched, 'is-valid': Usuario?.errors && Password?.touched}"
+        />
+        <div *ngIf="Usuario?.errors && Usuario?.touched">
+            <p *ngIf="Usuario?.hasError('required')" class="text-danger">
+                El Email es requerido
+            </p>
+            <p *ngIf="Usuario?.hasError('usuario')" class="text-danger">
+                El formato del mail debe ser válido
+            </p>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="password1" class="form-label">Contraseña</label>
+        <input 
+            type="password" 
+            formControlName="password"
+            class="form-control custom-form input"
+            id="password1" 
+            [ngClass]="{'is-invalid':Password?.errors && Usuario?.touched, 'is-valid': Password?.errors && Usuario?.touched}"
+        />
+
+        <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">
+                El Password es requerido
+            </p>
+            
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    <br>
+    <a routerLink="/porfolio">Regresar</a>
+    
+</form>
+-->
+<!--
+    <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card  bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+                    <div class="mb-md mt-md 4pb-5">
+                        <h2 class="fw-bold mb-2"><fa-icon [icon]="faLock"></fa-icon> Ingresar con Clave</h2>
+                        <br>
+                        
+
+                        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required  />
+                                <label class="form-label" for="nombreUsuario">Usuario</label>
+                            </div>
+
+                            <div class="form-outline form-white mb-4">
+                                <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required />
+                                <label class="form-label" for="password">Password</label>
+                            </div>
+
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                        </form>
+
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card  holder" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+                    <div class="mb-md mt-md 4pb-5">
+                        <h2 class="fw-bold mb-2"><fa-icon [icon]="faLock"></fa-icon> Ingresar con Clave</h2>
+                        <br>
+                        <!--<p class="text-white-50 mb-5">Por favor, ingresar usuario y clave</p>-->
+
+                        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required  />
+                                <label class="form-label" for="nombreUsuario">Usuario</label>
+                            </div>
+
+                            <div class="form-outline form-white mb-4">
+                                <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required />
+                                <label class="form-label" for="password">Password</label>
+                            </div>
+<!--
+                            <p class="smaill mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot Password?</a></p>
+-->
+                            <button class="btn btn btn-primary btn-lg px-5" type="submit">Login</button>
+                        </form>
+
+                    </div>
+                    <div>
+                        <!--<p class="mb-0">¿No tienes una cuenta? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                        </p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

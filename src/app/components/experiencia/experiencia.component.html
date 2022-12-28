@@ -1,0 +1,126 @@
+<!--
+<div class="container-fluid" *ngIf="hasRouter('/porfolio')">
+    <h2>Experiencia Laboral:</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark"  *ngIf="isLogged" (click)="irNuevaE()">
+            Agregar Nueva
+        </button>
+    </div>
+</div>
+<br>
+<div class="container" *ngIf="hasRouter('/porfolio')">
+    <div class="row align-items-start">
+        <div class="col">
+            <p class="lead">Empresa</p>
+        </div>
+        <div class="col">
+            <p class="lead">Período</p>
+        </div>
+        <div class="col">
+            <p class="lead">Tarea Realizada</p>
+        </div>
+    </div>
+</div>
+
+<div class="conteiner" *ngIf="hasRouter('/porfolio')">
+    <div *ngFor="let exper of miPorfolio">
+        <div class="row">
+            <div class="col-2">
+                <fa-icon 
+                    [icon]="faTimes" 
+                    [ngStyle]="{'color':'red'}"
+                    (click)="onDelete(exper)"
+                    *ngIf="isLogged"
+                >
+                </fa-icon>
+            </div>
+            <div class="col-2">
+                <fa-icon 
+                    [icon]="faEdit" 
+                    [ngStyle]="{'color':'blue'}"
+                    *ngIf="isLogged"
+                    routerLink="/editexp/{{exper.id}}"
+                ></fa-icon>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="logoEmpresa">
+                <img src="{{exper.logoEmpresa}}">
+                <p>{{exper.empresa}}</p>
+            </div>
+            <div class="col-2">
+                <p>{{exper.periodo}}</p>
+            </div>
+            <div class="col-6">
+                {{exper.tarea}}
+            </div>
+            <p></p>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="container-fluid" *ngIf="hasRouter('/porfolio')">
+    <h2>Experiencia Laboral:</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark"  *ngIf="isLogged" (click)="irNuevaE()">
+            Agregar Nueva
+        </button>
+    </div>
+</div>
+<br>
+<div class="container" *ngIf="hasRouter('/porfolio')">
+    <div class="row align-items-start">
+        <div class="col">
+            <p class="lead">Empresa</p>
+        </div>
+        <div class="col">
+            <p class="lead">Período</p>
+        </div>
+        <div class="col">
+            <p class="lead">Tarea Realizada</p>
+        </div>
+    </div>
+</div>
+
+<div class="conteiner" *ngIf="hasRouter('/porfolio')">
+    <div *ngFor="let exper of miPorfolio">
+        <div class="row">
+            <div class="col-1">
+                <fa-icon 
+                    [icon]="faTimes" 
+                    [ngStyle]="{'color':'red'}"
+                    (click)="onDelete(exper)"
+                    *ngIf="isLogged"
+                >
+                </fa-icon>
+            </div>
+            <div class="col-1">
+                <fa-icon 
+                    [icon]="faEdit" 
+                    [ngStyle]="{'color':'blue'}"
+                    *ngIf="isLogged"
+                    routerLink="/editexp/{{exper.id}}"
+                ></fa-icon>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1" id="logoEmpresa">
+                <img src="{{exper.logo}}">
+            </div>
+            <div class="col-1">
+            
+            </div>
+            <div class="col-2">
+                <p>{{exper.empresa}}</p>
+            </div>
+            <div class="col-2">
+                <p>{{exper.periodo}}</p>
+            </div>
+            <div class="col-6">
+                {{exper.tarea}}
+            </div>
+            <p></p>
+        </div>
+    </div>
+</div>

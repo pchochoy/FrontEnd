@@ -3,7 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  firebase: {
+    projectId: 'pdchportfolio',
+    appId: '1:882991306119:web:64d6095c571359878aaf22',
+    storageBucket: 'pdchportfolio.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyCBqXPMkhNkFwrtbT3aQYHjkyTR1ckBvFg',
+    authDomain: 'pdchportfolio.firebaseapp.com',
+    messagingSenderId: '882991306119',
+    measurementId: 'G-D753L37EFJ',
+  },
+  production: false,
+
+  //URL: 'http://localhost:8080/'
+  //URL: 'https://backendporf.herokuapp.com/'
+  URL: 'https://deploy-springboot1.fly.dev/'
+  
 };
 
 /*

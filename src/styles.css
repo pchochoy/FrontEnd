@@ -1,1 +1,159 @@
-/* You can add global styles to this file, and also import other style files */
+h1, h2 {
+    font-family: Lato;
+  }
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.login {
+    color: beige;
+}
+
+.social-icon {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 7px;
+    margin-right: 11px;
+    cursor: pointer;
+    color: white;
+}
+
+.social-icon i{
+    transition: 0.4s all;
+}
+
+.social-icon:hover i{
+    transform: scale(2);
+}
+
+.social-icon img {
+    transition: 0.4s all;
+}
+
+.social-icon:hover img {
+    transform: scale(2);
+}
+
+.mat-card {
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 20px;
+    border-color: blue;
+}
+
+.mat-card#first-card {
+    padding: 0%;
+}
+
+div#profile-background {
+    display: flex;
+    z-index: 1;
+    border-color: blue;
+}
+
+div#profile-background img{
+    width: 50%;
+    border-radius: 32px 32px 0 0;
+}
+
+div.clearfix{
+    width: 50%;
+    border-radius: 32px 32px 0 0;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 152px;
+    height: 152px;
+    margin-top: -110px;
+    z-index: 1;
+}
+
+div#info-actions {
+    display: flex;
+}
+
+div#info-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#info-data h1 {
+    font-size: 1.8rem;
+    display: inline;
+    font-weight: 500;
+    line-height: 1.25;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+div#info-data ul#info-details{
+    width: 232px;
+    list-style: none;
+    flex-shrink: 0;
+}
+
+div#info-data ul#info-details li a{
+    color: black;
+    display: flex;
+    text-decoration: none;
+}
+
+div#info-data ul#info-details li a h2{
+    font-size: 1rem;
+    font-weight: 500;
+    align-self: center;
+    vertical-align: baseline;
+}
+
+div#info-data ul#info-details li a img{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+div#info-contact span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+div#info-contact span a{
+    color: blue;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+
+div#info-company {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+ul.items-list {
+    list-style: none inside;
+}
+
+#logoEmpresa {
+    height: 30px;
+    width: 30px;
+    display: flex;
+}
+
+.logoEducacion {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    margin-left: 50px;
+    text-align: center;
+}
+
+body {
+    background-color: #EDFFB4 ;
+  }

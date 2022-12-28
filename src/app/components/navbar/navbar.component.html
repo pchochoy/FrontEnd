@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top">
+    <div class="container-fluid">
+        <img src="./assets/iLoveMaciel.png" height="40px">
+        <a class="navbar-brand text-while" href="#">-Argentina Programa #Yo Programo</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            </ul>
+
+            <div class="d-flex bg-secondary">
+                <ul>
+                    <li><span class="social-icon"><a href="https://www.facebook.com/pablo.chochoy">
+                                <img src="./assets/nav-bar-facebook.png" height="25px">
+                            </a></span></li>
+                    <li><span class="social-icon"><a href="https://www.linkedin.com/in/pablo-chochoy-b5283a101">
+                                <img src="./assets/nav-bar-link.png" height="25px">
+                            </a></span></li>
+                    <li><span class="social-icon"><a href="https://wa.me/3413221253">
+                                <img src="./assets/nav-bar-was.png" height="25px">
+                            </a></span></li>
+                    <li>
+                        <!--
+                        <a routerLink="/login" class="login" (click)="login()" *ngif="!isLogged">Login</a>
+                        <a routerLink="/login" class="login" (click)="onLogOut()" *ngif="isLogged">Cerrar Sesión</a>
+                        -->
+                        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Login</button>
+                        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

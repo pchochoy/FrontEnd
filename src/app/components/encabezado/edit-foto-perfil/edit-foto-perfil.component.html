@@ -1,0 +1,17 @@
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdateFotoPerfil()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="fotoperfil">Imagen de Perfil</label>
+                    <input type="file"  class="form-control" id="fotoperfil" name="fotoperfil" [(ngModel)]="persona.fotoperfil" required (change)="uploadImage($event)"
+                    accept=".jpg, .jpeg, .png">
+                </div>
+                <div class="imagen">
+                    <img [src]="imageService.url" width="200px">
+                </div>
+                <button class="btn btn-primary">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>

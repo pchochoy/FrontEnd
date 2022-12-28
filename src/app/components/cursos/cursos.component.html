@@ -1,0 +1,43 @@
+<!--contenedor de ancho completo, abarca todo el ancho de la ventana gráfica-->
+<div class="container-fluid" *ngIf="hasRouter('/porfolio')">
+    <h2>Educación:</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" *ngIf="isLogged" (click)="irNuevoC()">
+            Agregar Nuevo
+        </button>
+    </div>
+</div>
+<br>
+<div class="conteiner" *ngIf="hasRouter('/porfolio')">
+    <div *ngFor="let curso of miPorfolio">
+        <div class="row">
+            <div  class="col logoEducacion">
+                <img src="{{curso.logo}}">
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-2">
+                        <fa-icon 
+                            [icon]="faTimes" 
+                            [ngStyle]="{'color':'red'}"
+                            (click)="onDelete(curso)"
+                            *ngIf="isLogged"
+                        >
+                        </fa-icon>
+                    </div>
+                    <div class="col-2">
+                        <fa-icon 
+                            [icon]="faCoffee" 
+                            [ngStyle]="{'color':'blue'}"
+                            *ngIf="isLogged"
+                            routerLink="/editcurso/{{curso.id}}"
+                        >
+                        </fa-icon>
+                    </div>
+                </div>
+                <p class="lead">{{curso.instituto}}</p>
+                <p>{{curso.anio}} - {{curso.titulo}}</p>
+            </div>
+            <br>
+        </div>
+    </div>

@@ -1,0 +1,139 @@
+<!--
+<div class="container" *ngIf="curso">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="instituto">Instituto</label>
+                    <input type="text"  class="form-control" id="instituto" name="instituto" [(ngModel)]="curso.instituto" required>
+
+                    <label for="anio">Año</label>
+                    <input type="text"  class="form-control" id="anio" name="anio" [(ngModel)]="curso.anio" required>
+                
+                    <label for="titulo">Título</label>
+                    <input type="text"  class="form-control" id="titulo" name="titulo" [(ngModel)]="curso.titulo" required>
+
+                    <label for="logo">Logo</label>
+                    <input type="text"  class="form-control" id="logo" name="logo" [(ngModel)]="curso.logo" required>
+                </div>
+                <button class="btn btn-primary">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+-->
+
+<!--
+<div class="container marco-alta m-5" *ngIf="curso">
+    <div class="titulo-principal">
+        <h2>Modificación Curso</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioNuevoCurso" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="instituto">Instituto</label>
+                    <input type="text"  class="form-control" id="instituto" name="instituto" formControlName="instituto" [(ngModel)]="curso.instituto" required>
+                    <span *ngIf="formularioNuevoCurso.get('instituto')?.errors?.['required']">
+                        (El nombre del Instituto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevoCurso.get('instituto')?.errors?.['minlength']">
+                        (El nombre del Instituto tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="anio">Año</label>
+                    <input type="number"  class="form-control anio" id="anio" name="anio" formControlName="anio" [(ngModel)]="curso.anio" required>
+                    <span *ngIf="formularioNuevoCurso.get('anio')?.errors?.['required']">
+                        (El año no puede quedar vacío)
+                    </span>
+        
+                    <span *ngIf="this.formularioNuevoCurso.get('anio')?.errors?.['minlength']">
+                        (El año debe ser en formato AAAA)
+                    </span>
+                    <span *ngIf="this.formularioNuevoCurso.get('anio')?.errors?.['min']">
+                        (El año debe ser mayor a 1980)
+                    </span>
+                    <br>
+                    <label for="titulo">Título</label>
+                    <input type="text"  class="form-control" id="titulo" name="titulo" formControlName="titulo" [(ngModel)]="curso.titulo" required>
+                    <span *ngIf="formularioNuevoCurso.get('titulo')?.errors?.['required']">
+                        (El nombre del Título no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevoCurso.get('titulo')?.errors?.['minlength']">
+                        (El nombre del Título debe tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="logo">Logo</label>
+                    <input type="text"  class="form-control" id="logo" name="logo" [(ngModel)]="curso.logo" required>
+                </div>
+                <br>
+                <div class="titulo-principal">
+                    <button class="btn btn-primary">Atualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="container marco-alta m-5" *ngIf="curso">
+    <div class="titulo-principal">
+        <h2>Modificación Educación</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioNuevoCurso" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="instituto">Instituto</label>
+                    <input type="text"  class="form-control" id="instituto" name="instituto" formControlName="instituto" [(ngModel)]="curso.instituto" required>
+                    <span *ngIf="formularioNuevoCurso.get('instituto')?.errors?.['required']">
+                        (El nombre del Instituto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevoCurso.get('instituto')?.errors?.['minlength']">
+                        (El nombre del Instituto tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="anio">Año</label>
+                    <input type="number"  class="form-control anio" id="anio" name="anio" formControlName="anio" [(ngModel)]="curso.anio" required>
+                    <span *ngIf="formularioNuevoCurso.get('anio')?.errors?.['required']">
+                        (El año no puede quedar vacío)
+                    </span>
+        
+                    <span *ngIf="this.formularioNuevoCurso.get('anio')?.errors?.['minlength']">
+                        (El año debe ser en formato AAAA)
+                    </span>
+                    <span *ngIf="this.formularioNuevoCurso.get('anio')?.errors?.['min']">
+                        (El año debe ser mayor a 1980)
+                    </span>
+                    <br>
+                    <label for="titulo">Título</label>
+                    <input type="text"  class="form-control" id="titulo" name="titulo" formControlName="titulo" [(ngModel)]="curso.titulo" required>
+                    <span *ngIf="formularioNuevoCurso.get('titulo')?.errors?.['required']">
+                        (El nombre del Título no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevoCurso.get('titulo')?.errors?.['minlength']">
+                        (El nombre del Título debe tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="logo">Logo</label>
+                    <!--
+                    <input type="text"  class="form-control" id="logo" name="logo" [(ngModel)]="curso.logo" required>
+                    -->
+                    
+                    <input type="file" class="form-control" id="logo" name="logo" [(ngModel)]="curso.logo" required
+                    (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <div class="imagen">
+                    <br>
+                    <img [src]="imageService.url" width="50px">
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="titulo-principal">
+                    <button class="btn btn-primary">Atualizar</button>
+                </div>
+                <div>{{resultado}}</div>
+            </form>
+        </div>
+    </div>
+</div>

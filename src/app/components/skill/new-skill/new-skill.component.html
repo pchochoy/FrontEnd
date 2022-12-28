@@ -1,0 +1,39 @@
+<div class="container marco-alta m-5">
+    <div class="titulo-principal">
+        <h2>Nueva Skill</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioSkill" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="porcentaje">Nombre:</label>
+                    <input type="text"  class="form-control" id="nombre" name="nombre" formControlName="nombre" [(ngModel)]="nombre" required>
+                    <span *ngIf="formularioSkill.get('nombre')?.errors?.['required']">
+                        (El nombre no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioSkill.get('nombre')?.errors?.['minlength']">
+                        (El nombre deb tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="porcentaje">Porcentaje:</label>
+                    <input type="number"  class="form-control porcen" id="porcentaje" name="porcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje" required>
+                    <span *ngIf="formularioSkill.get('porcentaje')?.errors?.['required']">
+                        (El porcentaje no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioSkill.get('porcentaje')?.errors?.['min']">
+                        (El porcentaje debe ser mayor a 5)
+                    </span>
+                    <span *ngIf="this.formularioSkill.get('porcentaje')?.errors?.['max']">
+                        (El porcentaje debe ser menor igual  a 100)
+                    </span>
+                    <br>
+                </div>
+                <br>
+                <div class="titulo-principal">
+                    <button class="btn btn-primary">Agregar Skill</button>
+                </div>
+                <div>{{resultado}}</div>
+            </form>
+        </div>
+    </div>
+</div>

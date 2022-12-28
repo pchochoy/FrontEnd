@@ -1,0 +1,79 @@
+<!--
+<div class="container" *ngIf="experiencia">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text"  class="form-control" id="empresa" name="empresa" [(ngModel)]="experiencia.empresa" required>
+
+                    <label for="periodo">Período</label>
+                    <input type="text"  class="form-control" id="periodo" name="periodo" [(ngModel)]="experiencia.periodo" required>
+                
+                    <label for="tarea">Tarea</label>
+                    <input type="text"  class="form-control" id="tarea" name="tarea" [(ngModel)]="experiencia.tarea" required>
+
+                    <label for="logo">Logo</label>
+                    <input type="text"  class="form-control" id="logo" name="logo" [(ngModel)]="experiencia.logo" required>
+                </div>
+                <button class="btn btn-primary">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+-->
+<div class="container marco-alta m-5" *ngIf="experiencia">
+    <div class="titulo-principal">
+        <h2>Modificación Experiencia</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioNuevaExperiencia" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text"  class="form-control" id="empresa" name="empresa" formControlName="empresa" [(ngModel)]="experiencia.empresa" required>
+                    <span *ngIf="formularioNuevaExperiencia.get('empresa')?.errors?.['required']">
+                        (El nombre de la Empresa no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevaExperiencia.get('empresa')?.errors?.['minlength']">
+                        (El nombre de la Empresa debe tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="periodo">Período</label>
+                    <input type="text"  class="form-control" id="periodo" name="periodo" formControlName="periodo" [(ngModel)]="experiencia.periodo" required>
+                    <span *ngIf="formularioNuevaExperiencia.get('periodo')?.errors?.['required']">
+                        (El Período no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevaExperiencia.get('periodo')?.errors?.['minlength']">
+                        (El Período debe tener como mínimo 5 caracteres)
+                    </span>
+                    <br>                
+                    <label for="tarea">Tarea</label>
+                    <textarea rows="3" type="text"  class="form-control" id="tarea" name="tarea" formControlName="tarea" [(ngModel)]="experiencia.tarea" required></textarea>
+                    <span *ngIf="formularioNuevaExperiencia.get('tarea')?.errors?.['required']">
+                        (La Tarea no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevaExperiencia.get('tarea')?.errors?.['minlength']">
+                        (La Tarea debe tener como mínimo 10 caracteres)
+                    </span>
+                    <br>
+                    <label for="logo">Logo</label>
+                    <!--
+                    <input type="text"  class="form-control" id="logo" name="logo" [(ngModel)]="experiencia.logo" required>
+                    -->
+                    <input type="file" class="form-control" id="logo" name="logo" [(ngModel)]="experiencia.logo" required
+                    (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <div class="imagen">
+                    <br>
+                    <img [src]="imageService.url" width="50px">
+                    </div>
+                    <br>
+                </div>
+                <div class="titulo-principal">
+                    <button class="btn btn-primary">Actualizar</button>
+                </div>
+                <div>{{resultado}}</div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+{
+  "cabecera": [
+    {
+      "nombre": "Pablo D. Chochoy",
+      "profesion": "Ingeniero en Sistemas de Información",
+      "trabajofinal": "(Full Stack Developer Jr.)",
+      "infoProfesional": "Soy Analista de Sistemas e Ingeniero en Sistemas de Información egresado de la Universidad Tecnológica Nacional FRR Rosario. Actualmente me dedico al desarrollo de sistemas en Ideafix desde hace más de 15 años. Posea una amplia experiencia en lengiaje de programación C, con SQL y base de datos relacional."
+    }
+  ],
+  "experiencia": [
+    {
+      "id": 1,
+      "empresa": "Agricultores Federados Argentinos S.C.L.",
+      "periodo": "Desde 01/12/1996 a la actualidad.",
+      "tarea": "Desde 1996 a 2001 desempeñando tareas adminitrativas en el área Agroinsumos de la Cooperativa. Desde 2001 a la actualidad desempeñando en el área de Sistemas, realizando tareas de análisis, desarrollo, implementación de sistemas.",
+      "logoEmpresa": "./assets/logoAfa.png"
+    }
+  ],
+  "educacion": [
+    {
+      "id": 1,
+      "instituto": "Universidad Tecnológica Nacional (Rosario - Santa Fe)",
+      "anio": "2011",
+      "titulo": "Graduado Ingeniero en Sistemas de Información.",
+      "logoTitulo": "./assets/utn-logo.png"
+    },
+    {
+      "id": 2,
+      "instituto": "Escuela Enseñanza Media Mariano Moreno N 218 (Maciel-Santa Fe)",
+      "anio": "1995",
+      "titulo": "Graduado Perito Mercantil",
+      "logoTitulo": "./assets/educacion-218.png"
+    },
+    {
+      "id": 3,
+      "instituto": "Instituto CEDEC (San Lorenzo - Santa Fe)",
+      "anio": "1994",
+      "titulo": "Analista de Sistemas Computarizados",
+      "logoTitulo": "./assets/educacion-cedec.jpg"
+    },
+    {
+      "id": 4,
+      "instituto": "Instituto CEDEC (San Lorenzo - Santa Fe)",
+      "anio": "1993",
+      "titulo": "Programador de Sistmas",
+      "logoTitulo": "./assets/educacion-cedec.jpg"
+    },
+    {
+      "id": 5,
+      "instituto": "Instituto CEDEC (San Lorenzo - Santa Fe)",
+      "anio": "1992",
+      "titulo": "Operador Programador PC",
+      "logoTitulo": "./assets/educacion-cedec.jpg"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "instituto": "Capacitación Interna Cooperativa",
+      "anio": "2018",
+      "titulo": "Java Standard Oracle University",
+      "logoTitulo": "./assets/logoAfa.png"
+    },
+    {
+      "id": 2,
+      "instituto": "Educación IT (Rosario)",
+      "anio": "2017",
+      "titulo": "Java Web",
+      "logoTitulo": "./assets/educacion-it.jpg"
+    },
+    {
+      "id": 3,
+      "instituto": "Educación IT (Rosario)",
+      "anio": "2017",
+      "titulo": "HTML5",
+      "logoTitulo": "./assets/educacion-it.jpg"
+    },
+    {
+      "id": 4,
+      "instituto": "Educación IT (Rosario)",
+      "anio": "2017",
+      "titulo": "Java Standard",
+      "logoTitulo": "./assets/educacion-it.jpg"
+    },
+    {
+      "id": 5,
+      "instituto": "Full Solution (Rosario)",
+      "anio": "2014",
+      "titulo": "Programación Android",
+      "logoTitulo": "./assets/educacion-full.jpg"
+    },
+    {
+      "id": 6,
+      "instituto": "Capacitación Interna Cooperativa",
+      "anio": "2012",
+      "titulo": "People Tools I y II",
+      "logoTitulo": "./assets/logoAfa.png"
+    },
+    {
+      "id": 7,
+      "instituto": "Fundación Libertad",
+      "anio": "2012",
+      "titulo": "Administración Base de Datos Oracle",
+      "logoTitulo": "./assets/educacion-lib.png"
+    },
+    {
+      "id": 8,
+      "instituto": "Universidad Tecnológica Nacional FRR",
+      "anio": "2006",
+      "titulo": "Programación Java Web",
+      "logoTitulo": "./assets/utn-logo.png"
+    },
+    {
+      "id": 9,
+      "instituto": "Universidad Tecnológica Nacional FRR",
+      "anio": "2005",
+      "titulo": "Programación Java Inicial",
+      "logoTitulo": "./assets/utn-logo.png"
+    },
+    {
+      "id": 10,
+      "instituto": "Universidad Tecnológica Nacional FRR",
+      "anio": "2001",
+      "titulo": "Programación Visual Basic 6.0",
+      "logoTitulo": "./assets/utn-logo.png"
+    }
+  ]
+}

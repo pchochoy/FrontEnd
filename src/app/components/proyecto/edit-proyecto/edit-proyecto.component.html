@@ -1,0 +1,52 @@
+<div class="container marco-alta m-5" *ngIf="proyecto">
+    <div class="titulo-principal">
+        <h2>Modificar Proyecto</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioNuevoProyecto" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text"  class="form-control" id="nombre" name="nombre" formControlName="nombre" [(ngModel)]="proyecto.nombre" required>
+                    <span *ngIf="formularioNuevoProyecto.get('nombre')?.errors?.['required']">
+                        (El nombre del Proyecto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevoProyecto.get('nombre')?.errors?.['minlength']">
+                        (El nombre del Proyecto tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="anio">Año</label>
+                    <input type="text"  class="form-control" id="anio" name="anio" formControlName="anio" [(ngModel)]="proyecto.anio" required>
+                    <span *ngIf="formularioNuevoProyecto.get('anio')?.errors?.['required']">
+                        (El año no puede quedar vacío)
+                    </span>
+        
+                    <span *ngIf="this.formularioNuevoProyecto.get('anio')?.errors?.['minlength']">
+                        (El año debe ser en formato AAAA)
+                    </span>
+                    <span *ngIf="this.formularioNuevoProyecto.get('anio')?.errors?.['min']">
+                        (El año debe ser mayor a 1980)
+                    </span>
+                    <br>
+                    <label for="descripcion">Descripcion</label>
+                    <textarea type="text"  class="form-control" id="descripcion" name="descripcion" formControlName="descripcion" [(ngModel)]="proyecto.descripcion" required></textarea>
+                    <span *ngIf="formularioNuevoProyecto.get('nombre')?.errors?.['required']">
+                        (La descripcion del Proyecto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioNuevoProyecto.get('nombre')?.errors?.['minlength']">
+                        (La descripcion del Proyecto debe tener como mínimo 5 caracteres)
+                    </span>
+                    <!--
+                    <label for="link">Link</label>
+                    <input type="text"  class="form-control" id="link" name="link" [(ngModel)]="proyecto.link" required>
+-->
+                </div>
+                <br>
+                <div class="titulo-principal">
+                    <button class="btn btn-primary">Actualizar</button>
+                </div>
+                <div>{{resultado}}</div>
+            </form>
+        </div>
+    </div>
+</div>

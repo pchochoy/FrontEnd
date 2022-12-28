@@ -1,0 +1,26 @@
+<div class="container marco-alta m-5" *ngIf="persona">
+    <div class="titulo-principal">
+        <h2>Modificación Info Profesional</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioDatosPersonales" (ngSubmit)="onUpdate2InfoProfesional()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <textarea rows=8 type="text" class="form-control" id="info" name="info" formControlName="info" [(ngModel)]="persona.info" required></textarea>
+                </div>
+                <span *ngIf="formularioDatosPersonales.get('info')?.errors?.['required']">
+                    (Debe ingresar información profesional)
+                </span>
+                <span *ngIf="this.formularioDatosPersonales.get('info')?.errors?.['minlength']">
+                    (Información profesional debe tener como mínimo 30 caracteres)
+                </span>
+                <br>
+                <br>
+                <div class="titulo-principal">
+                    <button class="btn btn-primary">Atualizar</button>
+                </div>
+                <div>{{resultado}}</div>
+            </form>
+        </div>
+    </div>
+</div>

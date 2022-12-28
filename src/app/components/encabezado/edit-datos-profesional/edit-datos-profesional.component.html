@@ -1,0 +1,45 @@
+<div class="container marco-alta m-5" *ngIf="persona">
+    <div class="titulo-principal">
+        <h2>Modificación Datos Personales</h2>
+    </div>
+    <div class="row">
+        <div>
+            <form [formGroup]="formularioDatosPersonales" (ngSubmit)="onUpdateDatosPersonales()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nomapel">Nombre y Apellido</label>
+                    <input type="text"  class="form-control" id="nomapel" name="nomapel" formControlName="nomapel" [(ngModel)]="persona.nomapel" required>
+                    <span *ngIf="formularioDatosPersonales.get('nomapel')?.errors?.['required']">
+                        (El nombre del Instituto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioDatosPersonales.get('nomapel')?.errors?.['minlength']">
+                        (El nombre del Instituto tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="profesion">Título 1</label>
+                    <input type="text"  class="form-control" id="profesion" name="profesion" formControlName="profesion" [(ngModel)]="persona.profesion" required>
+                    <span *ngIf="formularioDatosPersonales.get('profesion')?.errors?.['required']">
+                        (El nombre del Instituto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioDatosPersonales.get('profesion')?.errors?.['minlength']">
+                        (El nombre del Instituto tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                    <label for="trabajo">Título 2</label>
+                    <input type="text"  class="form-control" id="trabajo" name="trabajo" formControlName="trabajo" [(ngModel)]="persona.trabajo" required>
+                    <span *ngIf="formularioDatosPersonales.get('trabajo')?.errors?.['required']">
+                        (El nombre del Instituto no puede quedar vacío)
+                    </span>
+                    <span *ngIf="this.formularioDatosPersonales.get('trabajo')?.errors?.['minlength']">
+                        (El nombre del Instituto tener como mínimo 5 caracteres)
+                    </span>
+                    <br>
+                </div>
+                <br>
+                <div class="titulo-principal">
+                <button class="btn btn-primary">Atualizar</button>
+            </div>
+            <div>{{resultado}}</div>
+            </form>
+        </div>
+    </div>
+</div>

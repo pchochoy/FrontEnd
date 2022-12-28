@@ -1,0 +1,40 @@
+<!--contenedor de ancho completo, abarca todo el ancho de la ventana gráfica-->
+<div class="container-fluid" *ngIf="hasRouter('/porfolio')">
+    <h2>Proyectos:</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" *ngIf="isLogged" (click)="irNuevoP()">
+            Agregar Nuevo
+        </button>
+    </div>
+</div>
+<br>
+<div class="conteiner" *ngIf="hasRouter('/porfolio')">
+    <div *ngFor="let proyecto of miPorfolio">
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-2">
+                        <fa-icon 
+                            [icon]="faTimes" 
+                            [ngStyle]="{'color':'red'}"
+                            (click)="onDelete(proyecto)"
+                            *ngIf="isLogged"
+                        >
+                        </fa-icon>
+                    </div>
+                    <div class="col-2">
+                        <fa-icon 
+                            [icon]="faCoffee" 
+                            [ngStyle]="{'color':'blue'}"
+                            *ngIf="isLogged"
+                            routerLink="/editproyecto/{{proyecto.id}}"
+                        >
+                        </fa-icon>
+                    </div>
+                </div>
+                <p class="lead">{{proyecto.nombre}}</p>
+                <p>{{proyecto.anio}} - {{proyecto.descripcion}}</p>
+            </div>
+            <br>
+        </div>
+    </div>

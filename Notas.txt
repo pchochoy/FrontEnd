@@ -1,0 +1,23 @@
+Base de Datos json se usó: json-server-npm
+
+Comandos
+Crear proyecto en angular
+npm new nombre_proyecto
+
+Correr el proyecto en explorador Web
+ng serve --open
+
+Correr base de datos json
+npm run server
+
+Crear compronente en carpeta components
+ng generate component components/nombre
+
+Crear app routing para los ruteos
+ng generate module app-routing --flat --module=app
+
+Crear Servicios en carpeta services
+ng generate service services/nombre
+
+Instalar Bootstrap al proyecto
+npm intall bootstrap

@@ -1,0 +1,65 @@
+<div class="row">
+    <h2>Hard & Soft Skills</h2>
+
+    <div class="col-lg2">
+        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+    </div>
+
+    <div class="text-center col-sm-4 cod-md-4 col-lg-4" *ngFor="let skill of skill" circulo>
+        <circle-progress 
+        [percent]="(skill.porcentaje)" 
+        [radius]="90"
+        [imageSrc]="''"
+        [title]="(skill.nombre)"
+        [titleColor]="'#212F3C'"
+        [showImage]="false"
+        [imageHeight]="70"
+        [imageWidth]="70"
+        [showUnits]="false"
+        [showSubtitle]="false" 
+        [outerStrokeWidth]="16" 
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'" 
+        [innerStrokeColor]="'#C7E596'" 
+        [animation]="true" 
+        [animationDuration]="600">
+        </circle-progress>
+
+        <div>
+            <fa-icon 
+                    [icon]="faTimes" 
+                    [ngStyle]="{'color':'red'}"
+                    (click)="delete(skill)"
+                    *ngIf="isLogged"
+                >
+            </fa-icon> 
+                <fa-icon 
+                    [icon]="faEdit" 
+                    [ngStyle]="{'color':'blue'}"
+                    *ngIf="isLogged"
+                    routerLink="/editskill/{{skill.id}}"
+                ></fa-icon>
+        </div>
+<!--
+        <div class="row">
+            <div class="col-2">
+                <fa-icon 
+                    [icon]="faTimes" 
+                    [ngStyle]="{'color':'red'}"
+                    (click)="delete(skill)"
+                    *ngIf="isLogged"
+                >
+                </fa-icon>
+            </div>
+            <div class="col-2">
+                <fa-icon 
+                    [icon]="faEdit" 
+                    [ngStyle]="{'color':'blue'}"
+                    *ngIf="isLogged"
+                    routerLink="/editskill/{{skill.id}}"
+                ></fa-icon>
+            </div>
+        </div>
+-->
+    </div>
+</div>
